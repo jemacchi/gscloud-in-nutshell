@@ -1,0 +1,12 @@
+dependencies:
+- name: geoservercloud
+  repository: https://camptocamp.github.io/helm-geoserver-cloud
+  version: 0.7.1
+- name: rabbitmq
+  repository: https://charts.bitnami.com/bitnami
+  version: 11.3.0
+- name: postgresql
+  repository: https://charts.bitnami.com/bitnami
+  version: 14.0.0
+digest: sha256:d9f114f7c182a1dfc0b38272e468779f80358d9a6d0c6eb45c731eff0f53f448
+generated: "2024-02-01T20:48:31.617632234-03:00"
