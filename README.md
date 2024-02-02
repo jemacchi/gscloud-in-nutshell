@@ -25,7 +25,7 @@ Note: how-tos are based on local execution using a K3s cluster under the default
 
 ## Download helm dependencies (optional)
 
-No need to do it really, since charts/ folder is included in the repository (bad !, but just to make it easier for those that want to just get a zip file with everything inside)
+No need to do it really, since charts/ folder is included in the repository (just to make it easier for those that want to get a zip file with everything inside)
 
 ```bash
 helm dependency update
