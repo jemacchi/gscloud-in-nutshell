@@ -18,6 +18,15 @@ You need helm !
 
 Check how to do that [here](https://github.com/camptocamp/helm-geoserver-cloud/blob/master/examples/README.md)
 
+# Running it
+If you already fulfill requirements (installed tools and cluster), then it's just a matter of deploying the chart in your cluster.
+
+```bash
+helm upgrade --install gs-cloud-pgconfig .
+```
+In the How-tos section you have some other useful commands (checking your deployment, accessing the WebUI, etc)
+
+
 # How-To
 
 Note: how-tos are based on local execution using a K3s cluster under the default namespace.
