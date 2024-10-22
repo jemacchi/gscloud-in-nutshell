@@ -8,5 +8,8 @@ dependencies:
 - name: postgresql
   repository: https://charts.bitnami.com/bitnami
   version: 14.0.0
-digest: sha256:366a310ad0beaf50e674cd231aeba5ac602ebfd19f685f96e3358a85345276ba
-generated: "2024-10-18T15:38:31.809676736-03:00"
+- name: pgbouncer
+  repository: https://icoretech.github.io/helm
+  version: 2.3.2
+digest: sha256:5d5dbb064945916363f0cfe2ef22350f5680a7bda45db9b6e7884e44683af1a8
+generated: "2024-10-22T15:38:48.364103259-03:00"

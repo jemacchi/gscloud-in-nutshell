@@ -15,3 +15,6 @@ dependencies:
     version: 14.0.0
     repository: 'https://charts.bitnami.com/bitnami'
     condition: postgresql.enabled
+  - name: 'pgbouncer'
+    repository: https://icoretech.github.io/helm
+    version: 2.3.2

@@ -18,7 +18,7 @@ data:
           schema: public
           wait-for-it: true
           wait-timeout: 10
-          url: jdbc:postgresql://{{ .Release.Name }}-postgresql-hl:5432/postgres
+          url: jdbc:postgresql://{{ .Release.Name }}-pgbouncer:5432/postgres
           username: postgres
           password:  g30s3rv3r
           maximum-pool-size: 10

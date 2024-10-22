@@ -25,6 +25,35 @@ postgresql:
       auth:
         postgresPassword: g30s3rv3r
 
+pgbouncer:
+  replicaCount: 1
+  config:
+    adminPassword: password
+    authUser: postgres
+    authPassword: g30s3rv3r
+    databases:
+      postgres:
+        host: gs-cloud-pgconfig-postgresql-hl
+        port: 5432
+        dbname: postgres
+    pgbouncer:
+      listen_addr: "0.0.0.0"
+      listen_port: 5432
+      auth_type: "md5"
+      max_client_conn: 100
+      default_pool_size: 20
+      ignore_startup_parameters: extra_float_digits
+  resources:
+    limits:
+      cpu: 100m
+      memory: 128Mi
+    requests:
+      cpu: 50m
+      memory: 64Mi
+  service:
+    type: ClusterIP
+    port: 5432
+
 additionalVolumes: &additional-volumes
   gs-cloud-optionals:
     configMap:
