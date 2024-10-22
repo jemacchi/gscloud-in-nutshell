@@ -3,6 +3,7 @@
 # Description
 
 The chart deploys GSCloud with enabled PGConfig capabilities, resulting in the storage of the Geoserver Catalog in a PostgreSQL database. This necessitates a dependency on the bitnami/postgres Helm chart.
+In order to handle database pool connections in a better way, between Geoserver components and Postgres, there is a PgBouncer setup.
 
 Additionally, GSCloud relies on RabbitMQ as the event bus handler to facilitate communication among various GSCloud components and services. The chart specifically enables WMS, WFS, WebUI, and Rest services, incorporating the Gateway to establish a unified entry point for these services.
 
@@ -55,14 +56,15 @@ kubectl get po
 Then you will get something like this:
 
 ```bash
-NAME                                             READY   STATUS    RESTARTS      AGE
-gs-cloud-pgconfig-gsc-gateway-7c4745ddf7-8slvw   1/1     Running   0             64s
-gs-cloud-pgconfig-postgresql-0                   1/1     Running   0             64s
-gs-cloud-pgconfig-gsc-wfs-6c8c7fdd5-r8kwb        1/1     Running   0             64s
-gs-cloud-pgconfig-gsc-wms-7d5c55d9dc-xq2xt       1/1     Running   0             64s
-gs-cloud-pgconfig-gsc-webui-8b786697c-7tvth      1/1     Running   0             64s
-gs-cloud-pgconfig-gsc-rest-776cc4d4ff-7q7w9      1/1     Running   1 (44s ago)   64s
-gs-cloud-pgconfig-rabbitmq-0                     1/1     Running   0             64s
+NAME                                             READY   STATUS    RESTARTS   AGE
+gs-cloud-pgconfig-gsc-wms-d7f7f5dc6-rwp5k        0/1     Running   0          8s
+gs-cloud-pgconfig-gsc-rest-797858fd8-7m54p       0/1     Running   0          8s
+gs-cloud-pgconfig-gsc-webui-7bd45586-67wfh       0/1     Running   0          8s
+gs-cloud-pgconfig-postgresql-0                   0/1     Running   0          8s
+gs-cloud-pgconfig-gsc-wfs-76656dfdcd-j46gk       0/1     Running   0          8s
+gs-cloud-pgconfig-pgbouncer-58b9f5f744-ztxkg     0/1     Running   0          8s
+gs-cloud-pgconfig-rabbitmq-0                     0/1     Running   0          8s
+gs-cloud-pgconfig-gsc-gateway-86468b8758-8m49q   1/1     Running   0          8s
 ```
 
 Note: your deploy will be ready once all the pods are in 1/1 in ready column and status = running
