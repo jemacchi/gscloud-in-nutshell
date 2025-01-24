@@ -89,4 +89,10 @@ helm uninstall gs-cloud-pgconfig
 ```bash
 kubectl delete pvc data-gs-cloud-pgconfig-postgresql-0
 ```
+# Documentation & related links
 
+- FOSS4G 2024 - Belem, Brazil
+  
+  Resume: https://talks.osgeo.org/foss4g-2024/talk/UKGTSL/
+  
+  Slides: https://talks.osgeo.org/media/foss4g-2024/submissions/UKGTSL/resources/foss4g_2024_gscloud_in_nutshell_arSWVGp.pdf
