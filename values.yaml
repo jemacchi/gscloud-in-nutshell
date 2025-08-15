@@ -58,10 +58,16 @@ additionalVolumes: &additional-volumes
   gs-cloud-optionals:
     configMap:
       name: geoserver-datasources-env
+  #devnull:
+  #  file:
+  #    path: /dev/null
+  #    subPath: masterpw.info
 
 additionalVolumeMounts: &additional-volume-mounts
   /etc/gscloud-custom:
     name: "gs-cloud-optionals"
+  #/opt/app/data_directory/security/masterpw.info:
+  #  name: "devnull"
 
 env: &env-override
   GEOSERVER_BASE_PATH:
@@ -108,12 +114,18 @@ geoservercloud:
   geoserver:
     ingress:
       enabled: true
+      hostGroups:
+        host1:
+          tls:
+            enabled: false
+          hosts:
+            - gscloud.local
     services:
       gateway:
-        <<: *common-service-values
         ingress:
           enabled: true
           path: /geoserver/
+        <<: *common-service-values
         containers:
           spring:
             <<: *common-container-spring-values
