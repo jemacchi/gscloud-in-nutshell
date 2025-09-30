@@ -3,13 +3,13 @@ dependencies:
   repository: https://camptocamp.github.io/helm-geoserver-cloud
   version: 2.4.2
 - name: rabbitmq
-  repository: https://charts.bitnami.com/bitnami
-  version: 15.0.0
+  repository: oci://ghcr.io/georchestra/bitnami-helm-charts
+  version: 14.4.0
 - name: postgresql
-  repository: https://charts.bitnami.com/bitnami
-  version: 14.0.0
+  repository: oci://ghcr.io/georchestra/bitnami-helm-charts
+  version: 15.5.2
 - name: pgbouncer
   repository: https://icoretech.github.io/helm
   version: 2.3.2
-digest: sha256:c6412f42ef483692cd58ccde065d58c6a743fcac8e28bf0af0b65a6307a7ff30
-generated: "2025-08-15T15:39:54.113363711-03:00"
+digest: sha256:d8413079bd56046fd470ecaab762cf15bd06fbbe14f2e80b21bcfd2ae487831c
+generated: "2025-09-30T11:30:00.856177796-03:00"

@@ -9,8 +9,8 @@ rabbitmq:
       memory: 512Mi
   image:
     registry: docker.io
-    repository: bitnami/rabbitmq
-    tag: 3.9.13-debian-10-r14
+    repository: bitnamilegacy/rabbitmq
+    tag: 3.13.3-debian-12-r0
   auth:
     username: geoserver
     password: password
